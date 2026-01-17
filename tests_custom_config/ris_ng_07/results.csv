@@ -1,0 +1,5 @@
+combination,best,seed,total_epochs,epoch,batch_size,k,num_layers,num_neurons,learning_rate,train_loss,train_accuracy,train_f1,test_loss,test_accuracy,test_f1
+epochs_100_batchsize_64_k_30_numlayers_5_numneurons_64_lr_0.0001_seed_42,True,42,100,0,64,30,5,64,0.0001,2.3037,14.828,3.829,2.3019,13.986,3.432
+epochs_100_batchsize_64_k_30_numlayers_5_numneurons_64_lr_0.0001_seed_42,True,42,100,1,64,30,5,64,0.0001,2.2993,14.828,3.829,2.2978,13.986,3.432
+epochs_100_batchsize_64_k_30_numlayers_5_numneurons_64_lr_0.0001_seed_42,True,42,100,2,64,30,5,64,0.0001,2.2952,14.828,3.829,2.2931,13.986,3.432
+epochs_100_batchsize_64_k_30_numlayers_5_numneurons_64_lr_0.0001_seed_42,True,42,100,3,64,30,5,64,0.0001,2.2902,14.828,3.829,2.2875,13.986,3.432

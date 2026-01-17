@@ -1,0 +1,9 @@
+
+
+Metrics of model (9/100):
+	-> Train loss: 1.6498
+	-> Train accuracy: 28.6207%
+	-> Train weighted F1: 20.3232%
+	-> Test loss: 1.7099
+	-> Test accuracy: 23.7762%
+	-> Test weighted F1: 19.1288%

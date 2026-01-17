@@ -1,0 +1,15 @@
+Processing: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Sorting log: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Saving new log: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Searching noise that guarantees almost 90% of fitness for log: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Extracting model with noise 100% for: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Model with noise: 100% -> fitness: 0.7319818686129413
+Extracting model with noise 90.0% for: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Model with noise: 90.0% -> fitness: 0.85777148881511
+Extracting model with noise 80.0% for: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Model with noise: 80.0% -> fitness: 0.85777148881511
+Extracting model with noise 70.0% for: /Users/chiaragobbi/Desktop/Università/dottorato/primo anno/NextActivityPredictionActiveNodes/input/xes/PrepaidTravelCosts.xes
+Model with noise: 70.0% -> fitness: 0.9151450046774992
+Done!
+Saving model..
+

@@ -1,0 +1,13 @@
+combination,best,seed,total_epochs,epoch,batch_size,k,num_layers,num_neurons,learning_rate,train_loss,train_accuracy,train_f1,test_loss,test_accuracy,test_f1
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,0,64,40,5,64,5e-05,2.3341,18.216,15.536,1.8446,31.978,20.198
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,1,64,40,5,64,5e-05,1.7599,36.155,29.413,1.5188,42.425,34.351
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,2,64,40,5,64,5e-05,1.3501,54.305,51.242,0.9601,68.105,64.684
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,3,64,40,5,64,5e-05,0.9887,67.061,64.329,0.6967,78.51,74.608
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,4,64,40,5,64,5e-05,0.7772,74.551,71.616,0.5462,82.297,78.284
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,5,64,40,5,64,5e-05,0.6252,80.267,77.459,0.448,85.925,82.532
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,6,64,40,5,64,5e-05,0.5281,83.52,81.127,0.3743,88.319,84.928
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,7,64,40,5,64,5e-05,0.4623,85.102,82.905,0.3422,88.825,85.394
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,8,64,40,5,64,5e-05,0.4209,86.079,83.89,0.321,88.998,85.588
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,9,64,40,5,64,5e-05,0.3949,86.438,84.308,0.3076,89.241,85.854
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,10,64,40,5,64,5e-05,0.3721,86.94,84.868,0.3034,88.908,85.56
+epochs_300_batchsize_64_k_40_numlayers_5_numneurons_64_lr_5e-05_seed_42,True,42,300,11,64,40,5,64,5e-05,0.3587,87.204,85.109,0.2869,89.449,86.061

@@ -1,0 +1,9 @@
+
+
+Metrics of model (18/300):
+	-> Train loss: 0.5179
+	-> Train accuracy: 76.3275%
+	-> Train weighted F1: 73.5148%
+	-> Test loss: 0.5091
+	-> Test accuracy: 76.9215%
+	-> Test weighted F1: 73.9407%

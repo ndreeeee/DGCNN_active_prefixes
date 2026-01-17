@@ -1,0 +1,7 @@
+batch_size: 64 
+k: 40 
+num_layers: 5 
+num_neurons: 64 
+learning_rate: 0.001 
+seed: 42 
+total_epochs: 300 

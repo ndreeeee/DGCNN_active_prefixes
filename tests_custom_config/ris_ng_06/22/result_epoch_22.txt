@@ -1,0 +1,9 @@
+
+
+Metrics of model (22/300):
+	-> Train loss: 0.9125
+	-> Train accuracy: 64.3135%
+	-> Train weighted F1: 61.7311%
+	-> Test loss: 1.0846
+	-> Test accuracy: 57.8316%
+	-> Test weighted F1: 55.3374%

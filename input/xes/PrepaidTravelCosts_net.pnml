@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_16">
+        <name>
+          <text>p_16</text>
+        </name>
+      </place>
+      <place id="p_18">
+        <name>
+          <text>p_18</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_12">
+        <name>
+          <text>p_12</text>
+        </name>
+      </place>
+      <place id="p_17">
+        <name>
+          <text>p_17</text>
+        </name>
+      </place>
+      <place id="p_20">
+        <name>
+          <text>p_20</text>
+        </name>
+      </place>
+      <place id="p_7">
+        <name>
+          <text>p_7</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_9">
+        <name>
+          <text>p_9</text>
+        </name>
+      </place>
+      <place id="p_14">
+        <name>
+          <text>p_14</text>
+        </name>
+      </place>
+      <place id="p_8">
+        <name>
+          <text>p_8</text>
+        </name>
+      </place>
+      <place id="p_10">
+        <name>
+          <text>p_10</text>
+        </name>
+      </place>
+      <place id="p_11">
+        <name>
+          <text>p_11</text>
+        </name>
+      </place>
+      <place id="p_13">
+        <name>
+          <text>p_13</text>
+        </name>
+      </place>
+      <place id="p_15">
+        <name>
+          <text>p_15</text>
+        </name>
+      </place>
+      <transition id="a60fbfaa-65ff-400b-acb1-1dd16b54b8ff">
+        <name>
+          <text>Permit REJECTED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="0d5bc192-2114-4a98-968e-ec074ed8fdc6">
+        <name>
+          <text>Permit FINAL_APPROVED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="skip_14">
+        <name>
+          <text>skip_14</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="73b57309-c04d-49c5-a253-2003af04360b"/>
+      </transition>
+      <transition id="skip_16">
+        <name>
+          <text>skip_16</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="dc795888-67e2-482d-8277-37b340ad19ae"/>
+      </transition>
+      <transition id="5c0ff33a-4e94-4b35-9567-46fc620bedf5">
+        <name>
+          <text>END</text>
+        </name>
+      </transition>
+      <transition id="66cb8a8f-e66c-4dd9-be7d-236e5ec44b14">
+        <name>
+          <text>Request For Payment APPROVED by PRE_APPROVER</text>
+        </name>
+      </transition>
+      <transition id="a41241a7-9ceb-4bc2-9e9f-18f7a0a959af">
+        <name>
+          <text>Permit REJECTED by PRE_APPROVER</text>
+        </name>
+      </transition>
+      <transition id="527d26eb-9f4e-4829-bc07-8c16030e8bda">
+        <name>
+          <text>Request For Payment APPROVED by ADMINISTRATION</text>
+        </name>
+      </transition>
+      <transition id="31a2c90a-97b2-4d35-a494-3562d8d34145">
+        <name>
+          <text>Permit APPROVED by BUDGET OWNER</text>
+        </name>
+      </transition>
+      <transition id="a9fa5f18-a8c5-429f-bdc3-ae22878befe5">
+        <name>
+          <text>Request For Payment FINAL_APPROVED by DIRECTOR</text>
+        </name>
+      </transition>
+      <transition id="2bff989c-9015-494f-8049-d7491d7138d4">
+        <name>
+          <text>Permit SUBMITTED by EMPLOYEE</text>
+        </name>
+      </transition>
+      <transition id="367b968f-74d5-4b32-af2b-2c39f8ba7e29">
+        <name>
+          <text>Permit APPROVED by ADMINISTRATION</text>
+        </name>
+      </transition>
+      <transition id="cf2069d2-58c8-45c8-b858-12342aad0759">
+        <name>
+          <text>Request For Payment REJECTED by ADMINISTRATION</text>
+        </name>
+      </transition>
+      <transition id="init_loop_8">
+        <name>
+          <text>init_loop_8</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="10c6c006-7558-484c-8208-bf2d7eac612b"/>
+      </transition>
+      <transition id="412dcd75-3611-47c4-8534-6f9204754e21">
+        <name>
+          <text>Permit REJECTED by EMPLOYEE</text>
+        </name>
+      </transition>
+      <transition id="31156ab4-4723-4c36-a25d-a61de2a4ac08">
+        <name>
+          <text>Request For Payment REJECTED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="336eae25-eaac-4cf1-add6-1f95e2d6a690">
+        <name>
+          <text>Request For Payment FINAL_APPROVED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="d93672df-285e-4f3f-b352-7cd770183bdf">
+        <name>
+          <text>Request For Payment REJECTED by MISSING</text>
+        </name>
+      </transition>
+      <transition id="skip_15">
+        <name>
+          <text>skip_15</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3d7376c7-ec13-44f2-822a-aa6d0962316e"/>
+      </transition>
+      <transition id="fa23eb93-6a48-4a3e-9580-52538adb00dc">
+        <name>
+          <text>Request For Payment REJECTED by BUDGET OWNER</text>
+        </name>
+      </transition>
+      <transition id="skip_10">
+        <name>
+          <text>skip_10</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6ef8655b-59a5-46b8-9ff7-b93dd89f957f"/>
+      </transition>
+      <transition id="skip_11">
+        <name>
+          <text>skip_11</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6324efc3-74a2-4744-8fb1-43f517c8677e"/>
+      </transition>
+      <transition id="skip_12">
+        <name>
+          <text>skip_12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0a7c2ad3-6b70-4120-b98f-42b38a104aff"/>
+      </transition>
+      <transition id="skip_17">
+        <name>
+          <text>skip_17</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="212c5a7f-b376-46a1-9ed3-bbbc07ebfb96"/>
+      </transition>
+      <transition id="74a66b55-2ba9-4166-8093-abb0ae7ed2b4">
+        <name>
+          <text>START</text>
+        </name>
+      </transition>
+      <transition id="aa39ba4c-641c-4e61-9726-362313901438">
+        <name>
+          <text>Request For Payment SUBMITTED by EMPLOYEE</text>
+        </name>
+      </transition>
+      <transition id="6c993629-48dc-4aa1-8741-0f946585772c">
+        <name>
+          <text>Request For Payment REJECTED by EMPLOYEE</text>
+        </name>
+      </transition>
+      <transition id="skip_7">
+        <name>
+          <text>skip_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d68089aa-6a3a-484a-ad0e-133f49831492"/>
+      </transition>
+      <transition id="79ed4f4f-42d8-430d-a1b1-160585caf4eb">
+        <name>
+          <text>Payment Handled</text>
+        </name>
+      </transition>
+      <transition id="skip_18">
+        <name>
+          <text>skip_18</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="05eef876-d882-493c-a17e-670088f65baf"/>
+      </transition>
+      <transition id="skip_19">
+        <name>
+          <text>skip_19</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="2c55ba15-65d7-4b3f-84df-db880c984fc7"/>
+      </transition>
+      <transition id="d0b3634d-d008-4ac4-9b3a-e997ed855892">
+        <name>
+          <text>Permit REJECTED by BUDGET OWNER</text>
+        </name>
+      </transition>
+      <transition id="3e4799aa-89bb-46c2-9257-106ec67a5e1e">
+        <name>
+          <text>Request For Payment SAVED by EMPLOYEE</text>
+        </name>
+      </transition>
+      <transition id="70bddf3d-e212-48f3-9716-557752761574">
+        <name>
+          <text>Request For Payment REJECTED by PRE_APPROVER</text>
+        </name>
+      </transition>
+      <transition id="init_loop_5">
+        <name>
+          <text>init_loop_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="49650cc8-7b8d-4457-ba72-26c755b6fb15"/>
+      </transition>
+      <transition id="b1c98b2f-1c53-4f81-93f4-da0b8d1b6371">
+        <name>
+          <text>Request Payment</text>
+        </name>
+      </transition>
+      <transition id="ffab5567-b4f5-4d71-949c-65a760874049">
+        <name>
+          <text>Request For Payment APPROVED by BUDGET OWNER</text>
+        </name>
+      </transition>
+      <transition id="7cdacf22-d947-4560-abe0-b16f7bb8ea63">
+        <name>
+          <text>Request For Payment APPROVED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="c3da30e9-8951-4947-b17c-2c8d39df9cc3">
+        <name>
+          <text>Permit APPROVED by SUPERVISOR</text>
+        </name>
+      </transition>
+      <transition id="init_loop_3">
+        <name>
+          <text>init_loop_3</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3f899831-3e04-405d-b457-3059ea116b04"/>
+      </transition>
+      <transition id="4e868aa1-795c-44d6-a99f-29403b402558">
+        <name>
+          <text>Permit REJECTED by ADMINISTRATION</text>
+        </name>
+      </transition>
+      <transition id="722942b1-aded-4e8f-8542-4f0c97566488">
+        <name>
+          <text>Permit APPROVED by PRE_APPROVER</text>
+        </name>
+      </transition>
+      <transition id="73ac1779-c335-4f67-8ade-7a48a6d0f753">
+        <name>
+          <text>Permit FINAL_APPROVED by DIRECTOR</text>
+        </name>
+      </transition>
+      <transition id="skip_13">
+        <name>
+          <text>skip_13</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="8f3771b3-c598-4df5-a148-9a62b0c37509"/>
+      </transition>
+      <transition id="d8ca4943-1f49-4aaf-970b-9baf1a9632f4">
+        <name>
+          <text>Permit REJECTED by MISSING</text>
+        </name>
+      </transition>
+      <arc id="5317073920" source="2bff989c-9015-494f-8049-d7491d7138d4" target="p_10"/>
+      <arc id="5337896448" source="p_17" target="73ac1779-c335-4f67-8ade-7a48a6d0f753"/>
+      <arc id="5327645200" source="p_11" target="6c993629-48dc-4aa1-8741-0f946585772c"/>
+      <arc id="5333105680" source="d93672df-285e-4f3f-b352-7cd770183bdf" target="p_20"/>
+      <arc id="5332893216" source="p_10" target="367b968f-74d5-4b32-af2b-2c39f8ba7e29"/>
+      <arc id="5331729952" source="p_11" target="skip_7"/>
+      <arc id="5333093920" source="skip_14" target="p_12"/>
+      <arc id="5317073968" source="p_7" target="70bddf3d-e212-48f3-9716-557752761574"/>
+      <arc id="5337894960" source="73ac1779-c335-4f67-8ade-7a48a6d0f753" target="p_18"/>
+      <arc id="5324719152" source="p_18" target="a9fa5f18-a8c5-429f-bdc3-ae22878befe5"/>
+      <arc id="5317906480" source="p_8" target="skip_17"/>
+      <arc id="5334478384" source="skip_17" target="p_7"/>
+      <arc id="5324721216" source="p_18" target="skip_11"/>
+      <arc id="5325388864" source="d0b3634d-d008-4ac4-9b3a-e997ed855892" target="p_9"/>
+      <arc id="5327648320" source="6c993629-48dc-4aa1-8741-0f946585772c" target="p_12"/>
+      <arc id="5333091904" source="p_14" target="79ed4f4f-42d8-430d-a1b1-160585caf4eb"/>
+      <arc id="5336005696" source="p_12" target="skip_16"/>
+      <arc id="5327949392" source="p_15" target="b1c98b2f-1c53-4f81-93f4-da0b8d1b6371"/>
+      <arc id="5322830944" source="p_12" target="skip_15"/>
+      <arc id="5317912672" source="p_8" target="skip_18"/>
+      <arc id="5316089968" source="412dcd75-3611-47c4-8534-6f9204754e21" target="p_12"/>
+      <arc id="5330124912" source="5c0ff33a-4e94-4b35-9567-46fc620bedf5" target="sink"/>
+      <arc id="5327641216" source="p_11" target="722942b1-aded-4e8f-8542-4f0c97566488"/>
+      <arc id="5329464448" source="init_loop_8" target="p_15"/>
+      <arc id="5316085888" source="skip_13" target="p_14"/>
+      <arc id="5332890768" source="367b968f-74d5-4b32-af2b-2c39f8ba7e29" target="p_9"/>
+      <arc id="5316099232" source="p_14" target="412dcd75-3611-47c4-8534-6f9204754e21"/>
+      <arc id="5314707616" source="p_11" target="527d26eb-9f4e-4829-bc07-8c16030e8bda"/>
+      <arc id="5336003248" source="d8ca4943-1f49-4aaf-970b-9baf1a9632f4" target="p_12"/>
+      <arc id="5317910704" source="skip_18" target="p_6"/>
+      <arc id="5315961536" source="p_5" target="init_loop_3"/>
+      <arc id="5327954624" source="b1c98b2f-1c53-4f81-93f4-da0b8d1b6371" target="p_16"/>
+      <arc id="5334372544" source="p_15" target="336eae25-eaac-4cf1-add6-1f95e2d6a690"/>
+      <arc id="5325378256" source="p_7" target="3e4799aa-89bb-46c2-9257-106ec67a5e1e"/>
+      <arc id="5327637712" source="p_11" target="cf2069d2-58c8-45c8-b858-12342aad0759"/>
+      <arc id="5332756192" source="31156ab4-4723-4c36-a25d-a61de2a4ac08" target="p_16"/>
+      <arc id="5333103328" source="p_14" target="d93672df-285e-4f3f-b352-7cd770183bdf"/>
+      <arc id="5315572976" source="p_15" target="ffab5567-b4f5-4d71-949c-65a760874049"/>
+      <arc id="5317082368" source="p_7" target="2bff989c-9015-494f-8049-d7491d7138d4"/>
+      <arc id="5327637760" source="722942b1-aded-4e8f-8542-4f0c97566488" target="p_12"/>
+      <arc id="5322820864" source="a60fbfaa-65ff-400b-acb1-1dd16b54b8ff" target="p_12"/>
+      <arc id="5321374976" source="31a2c90a-97b2-4d35-a494-3562d8d34145" target="p_16"/>
+      <arc id="5315959568" source="init_loop_3" target="p_7"/>
+      <arc id="5315690256" source="p_7" target="aa39ba4c-641c-4e61-9726-362313901438"/>
+      <arc id="5315676432" source="aa39ba4c-641c-4e61-9726-362313901438" target="p_9"/>
+      <arc id="5337906960" source="p_17" target="c3da30e9-8951-4947-b17c-2c8d39df9cc3"/>
+      <arc id="5325376288" source="p_7" target="a41241a7-9ceb-4bc2-9e9f-18f7a0a959af"/>
+      <arc id="5332883232" source="init_loop_5" target="p_11"/>
+      <arc id="5314711840" source="527d26eb-9f4e-4829-bc07-8c16030e8bda" target="p_13"/>
+      <arc id="5316852512" source="p_13" target="a60fbfaa-65ff-400b-acb1-1dd16b54b8ff"/>
+      <arc id="5325386032" source="a41241a7-9ceb-4bc2-9e9f-18f7a0a959af" target="p_9"/>
+      <arc id="5332888368" source="p_9" target="init_loop_5"/>
+      <arc id="5334370096" source="p_15" target="skip_10"/>
+      <arc id="5337904944" source="p_15" target="7cdacf22-d947-4560-abe0-b16f7bb8ea63"/>
+      <arc id="5333098288" source="79ed4f4f-42d8-430d-a1b1-160585caf4eb" target="p_20"/>
+      <arc id="5330432832" source="source" target="74a66b55-2ba9-4166-8093-abb0ae7ed2b4"/>
+      <arc id="5315687232" source="p_7" target="66cb8a8f-e66c-4dd9-be7d-236e5ec44b14"/>
+      <arc id="5315682624" source="66cb8a8f-e66c-4dd9-be7d-236e5ec44b14" target="p_9"/>
+      <arc id="5316850496" source="p_13" target="fa23eb93-6a48-4a3e-9580-52538adb00dc"/>
+      <arc id="5321367872" source="p_15" target="31a2c90a-97b2-4d35-a494-3562d8d34145"/>
+      <arc id="5316844880" source="fa23eb93-6a48-4a3e-9580-52538adb00dc" target="p_12"/>
+      <arc id="5316202832" source="ffab5567-b4f5-4d71-949c-65a760874049" target="p_16"/>
+      <arc id="5337902928" source="skip_10" target="p_17"/>
+      <arc id="5315680608" source="4e868aa1-795c-44d6-a99f-29403b402558" target="p_9"/>
+      <arc id="5314720096" source="skip_7" target="p_13"/>
+      <arc id="5329458016" source="p_13" target="init_loop_8"/>
+      <arc id="5334370144" source="336eae25-eaac-4cf1-add6-1f95e2d6a690" target="p_16"/>
+      <arc id="5330129760" source="p_6" target="skip_19"/>
+      <arc id="5315687280" source="p_7" target="d0b3634d-d008-4ac4-9b3a-e997ed855892"/>
+      <arc id="5334482800" source="74a66b55-2ba9-4166-8093-abb0ae7ed2b4" target="p_5"/>
+      <arc id="5332750720" source="p_15" target="31156ab4-4723-4c36-a25d-a61de2a4ac08"/>
+      <arc id="5315685264" source="p_7" target="4e868aa1-795c-44d6-a99f-29403b402558"/>
+      <arc id="5324729232" source="p_16" target="skip_12"/>
+      <arc id="5334471568" source="p_6" target="5c0ff33a-4e94-4b35-9567-46fc620bedf5"/>
+      <arc id="5317070752" source="70bddf3d-e212-48f3-9716-557752761574" target="p_9"/>
+      <arc id="5327650720" source="cf2069d2-58c8-45c8-b858-12342aad0759" target="p_12"/>
+      <arc id="5337900960" source="c3da30e9-8951-4947-b17c-2c8d39df9cc3" target="p_18"/>
+      <arc id="5337897888" source="7cdacf22-d947-4560-abe0-b16f7bb8ea63" target="p_17"/>
+      <arc id="5334482848" source="skip_12" target="p_15"/>
+      <arc id="5335997872" source="skip_16" target="p_8"/>
+      <arc id="5334474160" source="skip_15" target="p_11"/>
+      <arc id="5324733888" source="skip_11" target="p_16"/>
+      <arc id="5325383104" source="3e4799aa-89bb-46c2-9257-106ec67a5e1e" target="p_9"/>
+      <arc id="5332043712" source="p_15" target="0d5bc192-2114-4a98-968e-ec074ed8fdc6"/>
+      <arc id="5324731872" source="a9fa5f18-a8c5-429f-bdc3-ae22878befe5" target="p_16"/>
+      <arc id="5324727264" source="p_16" target="skip_13"/>
+      <arc id="5334474208" source="skip_19" target="p_5"/>
+      <arc id="5335997920" source="p_20" target="d8ca4943-1f49-4aaf-970b-9baf1a9632f4"/>
+      <arc id="5332057584" source="0d5bc192-2114-4a98-968e-ec074ed8fdc6" target="p_16"/>
+      <arc id="5333093872" source="p_20" target="skip_14"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

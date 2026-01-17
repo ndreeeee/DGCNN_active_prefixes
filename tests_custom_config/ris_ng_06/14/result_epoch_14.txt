@@ -1,0 +1,9 @@
+
+
+Metrics of model (14/300):
+	-> Train loss: 0.8599
+	-> Train accuracy: 66.8797%
+	-> Train weighted F1: 64.1616%
+	-> Test loss: 0.9887
+	-> Test accuracy: 61.6190%
+	-> Test weighted F1: 58.4031%

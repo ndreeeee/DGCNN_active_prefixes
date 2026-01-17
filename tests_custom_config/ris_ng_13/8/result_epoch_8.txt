@@ -1,0 +1,9 @@
+
+
+Metrics of model (8/50):
+	-> Train loss: 2.0768
+	-> Train accuracy: 18.1303%
+	-> Train weighted F1: 12.5423%
+	-> Test loss: 2.0974
+	-> Test accuracy: 14.1718%
+	-> Test weighted F1: 3.5375%

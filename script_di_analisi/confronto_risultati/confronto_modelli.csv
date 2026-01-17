@@ -1,0 +1,14 @@
+Metrica,Senza nodo globale,Con nodo globale (lr=0.0005),Con nodo globale (lr=0.001)
+Epochs,300.0,300.0,300.0
+Batch Size,64.0,64.0,64.0
+K (vicini),30.0,40.0,40.0
+Num Layers,5.0,5.0,5.0
+Num Neurons,64.0,64.0,64.0
+Learning Rate,0.0005,0.0005,0.001
+Best Epoch,37.0,14.0,13.0
+Train Loss,0.2613,0.2535,0.2528
+Train Accuracy (%),89.56,89.82,89.73
+Train F1 (%),86.44,86.97,86.62
+Test Loss,0.2489,0.26,0.2493
+Test Accuracy (%),90.54,89.95,90.42
+Test F1 (%),87.25,87.0,87.05

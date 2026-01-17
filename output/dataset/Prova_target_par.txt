@@ -1,0 +1,10 @@
+
+RequestForPaymentSUBMITTEDbyEMPLOYEE
+RequestForPaymentAPPROVEDbyADMINISTRATION
+RequestForPaymentAPPROVEDbyBUDGETOWNER
+RequestForPaymentFINALAPPROVEDbySUPERVISOR
+RequestPayment
+PaymentHandled
+END
+RequestForPaymentREJECTEDbyADMINISTRATION
+RequestForPaymentREJECTEDbyEMPLOYEE
