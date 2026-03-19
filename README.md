@@ -1,51 +1,50 @@
-# DGCNN Active Prefixes
+# DGCNN - Next Activity Prediction
 
-Questo repository implementa un'applicazione avanzata di **Predictive Process Monitoring** (PPM) che combina discipline di **Process Mining** e **Deep Graph Learning**. L'obiettivo primario è prevedere la successiva attività di un processo aziendale (Next Activity Prediction), elaborando e trasformando le tracce formali estratte in grafi arricchiti da informazioni strutturali e temporali.
+Progetto universitario realizzato per il corso di **BIG Data Analytics and Machine Learning** del corso di Laurea Magistrale in **Ingegneria Informatica e dell'Automazione** presso l'**Università Politecnica delle Marche (UNIVPM)**.
+
+## Autori
+- Andrea Altieri
+- Andrea Flaiani
+
+## Descrizione del Progetto
+
+Questo repository contiene un'applicazione per prevedere l'attività futura all'interno di un processo (Predictive Process Monitoring). Per far questo, il sistema unisce le tecniche di **Process Mining** con reti neurali avanzate chiamate **Deep Graph Convolutional Neural Networks (DGCNN)**.
+
+In parole semplici, il sistema prende i file di log aziendali (in formato `.xes`) e li trasforma in "grafi": insiemi di punti (le attività fatte) uniti da linee (l'ordine temporale in cui sono state fatte). Dopodiché, fa studiare questi grafi a un'intelligenza artificiale per farle imparare a prevedere quale sarà la mossa o l'attività successiva in un processo ancora in corso.
 
 ## Caratteristiche Principali
 
-Il progetto si basa sulla traduzione delle tracce dei log degli eventi (`.xes`) in veri e propri "Instance Graph", permettendo alle reti convoluzionali di sfruttare topologia e contesto:
+1. **Gestione del File e dei Dati (Algoritmo BIG)**: Legge i dati dal file di log e corregge automaticamente eventuali errori nelle registrazioni delle singole sequenze. Il risultato è la creazione di grafi esatti, ripuliti dal rumore.
+2. **Supporto alle Esecuzioni in Parallelo**: Nel mondo reale, molte attività succedono in parallelo. Per questo motivo, lo strumento collega i vari casi attivi in quel momento creando un "Super-Grafo". Tramite l'uso di un nodo globale `G`, il sistema fa vedere all'Intelligenza Artificiale il contesto temporale completo, permettendo predizioni molto più precise e logiche.
+3. **Rete Neurale Avanzata (DGCNN)**: Usa la libreria PyTorch per analizzare strutture geometriche che cambiano di volta in volta, elaborando migliaia di grafi complessi per impararne i pattern.
 
-- **Estrazione dei Modelli e Conformity Tracking (Algoritmo BIG):** Il sistema tenta la scoperta induttiva di un modello normativo (sotto forma di Rete di Petri). Segue l'allineamento delle tracce a quest'ultima e una complessa procedura di pulizia via *insertion repair* e *deletion repair*. Tale meccanismo garantisce grafi delle istanze altamente robusti al rumore, i quali catturano le esatte e conformi sequenze causali e parallele tra le operazioni del log origiale.
-- **Rappresentazione a Grafo Multiplo (Active Prefixes Context-awareness):** In ecosistemi complessi (soprattutto esposti ad esecuzioni parallele non sequenziali), il framework costruisce al volo dei "Super-Grafi". Questo approccio dinamico connette il prefisso di traccia attenzionato (Reference Prefix) con tutti gli altri "Prefissi Attivi" appartenenti a casi concomitanti ed eseguiti nel medesimo lasso di tempo. L'unione avviene tramite un nodo Globale convergente (chiamato `G`).
-- **Deep Graph Convolutional Neural Network (DGCNN):**  La rete esibisce architetture convoluzionali spaziali modellate col framework GraphSAGE di Pytorch Geometric (`SAGEConv`). Essendo i grafi estratti variabili in volume e topologia, gli stack convolutivi delegano l'uniformità dei tensori originati ad uno strato di `SortAggregation` (Pooling spaziale a k-nodi).
-- **Temporal Split & Valutazione Metriche:** Un generatore di layout visivi (alimentato da `networkx`) consente un'esplorazione step-by-step dei layer interattivi sui tensori. I target sono divisi coerentemente col tempo reale delle log (Temporal Split) e i log statistici finali descrivono variazioni di Loss, metriche multi-classe F1-Score e curve aggregate per la lunghezza d'istanza analizzata.
+## Struttura del Codice
 
-## Struttura della Codebase
+- `config.py`: File in cui impostare tutte le configurazioni (dove pescare i file di input, quante "epoche" far fare alla rete neurale, cartelle di output, ecc.).
+- `BIG.py`: Lo script che trasforma il log sorgente in grafi (file con estensione `.g`).
+- `TO_GRAPHS_ACTIVE_NODES_NORES_OPT.py`: File di collegamento che trasforma i grafi scritti al passo precedente nella forma matematica che PyTorch riesce a capire (tensori). Gestisce anche la creazione del "Super-Grafo" per i decorsi contemporanei.
+- `DGCNN.py`: Contiene semplicemente il posizionamento e le specifiche matematiche dei vari layer della rete.
+- `TRAINING.py`: Il vero motore del programma. Usa tutti gli script precedenti per addestrare l'IA, mettere alla prova i modelli su dati nascosti e fornire grafici sulle reali performance di previsione.
+- `requirements.txt`: La lista di tutti i pacchetti esterni necessari da scaricare.
 
-Di seguito è riportata un'overview dei macro-moduli:
+## Come Farlo Funzionare
 
-- `config.py`: Centralizza e manipola l'assoluta interezza delle configurazioni (path delle directory Input/Output, iperparametri e pesi per le fasi di tuning della neural net - e.g. epoch, seed, learning rate). Supporta l'istanziamento autogestito delle directory previste dal path.
-- `BIG.py`: Contiene l'implementazione dell'algoritmo *BIG*. Interagendo ampiamente con le interfacce esposte da librerie come `pm4py`, scopre i modelli Petri, ne testa l'aderenza con le tracce iniziali e ne esegue allineamenti causali. Finalizza emettendo file ad estensione `.g` (istanze a grani individuali).
-- `TO_GRAPHS_ACTIVE_NODES_NORES_OPT.py`: Motore pre-elaborativo preposto alla mappatura dei `.g` generati in autentici tensori (`Data` format di `torch_geometric`). Implementa logiche di merge e collision solving per unire i prefix attualizzati al Super-Grafo.
-- `DGCNN.py`: Definizione architetturale del modulo di rete Pytorch multi-layer descrivente la `DGCNNSTATE`.
-- `TRAINING.py`: Modulo predisposto per assorbire i subset (Train vs Test Dataset), attuando cicli di forward/backward sul device, producendo diagrammi e statistiche ad alto livello (es. confusion matrix, matrici di somiglianza strutturale sui set multi-layer e grafici loss-based).
+**Requisiti e Installazione**  
+Per prima cosa, assicurati di scaricare i moduli usati dallo script lanciando questo comando da riga di comando (es. PowerShell o Terminal):
 
-## Dipendenze e Requisiti
-
-Assicurati di disporre delle seguenti dipendenze principali prima dell'esecuzione:
-- `torch` == 1.13.1  *(o versioni superiori compatibili col proprio hardware)*
-- `torch-geometric` == 2.3.1
-- `pm4py` == 2.2.16
-- Pacchetti standard aggiuntivi annotati in `requirements.txt` (`matplotlib`, `networkx`, `pandas`, `scikit-learn`, ecc.).
-
-Per installarle è possibile utilizzare il classico gestore pip:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Come eseguire
+**Esecuzione Passata a Passata:**
 
-1. **Configurazione:** Iniziate modificando parametri desiderati (come *num_epochs* o *patience*) situati all'interno della funzione `load()` in `config.py`. Creare la stringa di testo all'interno di `log_name.txt` allocato presso la root directory del progetto qualora vorreste targetizzare uno `.xes` specifico in `input/xes/`. 
-2. **Inizializzazione Albero di Eventi:** Posizionate il vostro file Event Log all'interno della corretta sottocartella `input/xes/`. In assenza di informazioni puntuali `config.py` cercherà una root con file base (es. `testXes.xes`).
-3. **Elaborazione delle Tracce in Graph Formats:**
-   Eseguite ora lo script generativo per trasformare il Log in topologie archiviate temporaneamente nell'output preposto format `.g`.
+1. **Preparazione dei Dati:** Inserisci il nome del tuo file log dentro a `log_name.txt` nella cartella principale (senza scrivere `.xes`). Inserisci invece il file vero e proprio dentro alla cartella `input/xes/`. 
+2. **Primo Step - Creazione dei Grafi:** Genera tutti i grafi dal file log eseguendo:
    ```bash
    python BIG.py
    ```
-4. **Apprendimento ed Analisi Modello DGCNN:**
-   L'output ora incanalato è pronto a fungere da Dataset tensoriale; l'ultimo passaggio consisterà nel processare dinamicamente col convertitore i grafi estesi, per poi passarlo da script ai backend di PyTorch.
+3. **Secondo Step - Trasformazione e Addestramento:** Una volta ultimata la fase dei grafi, avvia  l'apprendimento del modello lanciando:
    ```bash
    python TRAINING.py
    ```
-   *(Lo script consentirà -se desiderato e de-commentato ove descrittoci- sia la navigazione step by step dei prefissi esaminati su pop-up esterni interattivi, seguitamente l'esplicitazione formale delle feature extractate).*
+   *Nota: lo script genererà in autonomia molteplici grafici finali sulle performance e sulle metriche usate (come F1-Score).*
